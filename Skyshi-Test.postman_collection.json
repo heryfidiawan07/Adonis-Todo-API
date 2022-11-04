@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "4d9be876-a6af-426f-b748-d5fcb18b44a4",
+		"name": "Skyshi-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6833030"
+	},
+	"item": [
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/activity-groups",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"activity-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test-1\",\r\n    \"email\": \"test1@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/activity-groups",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"activity-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test-22\",\r\n    \"email\": \"test22@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/activity-groups/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"activity-groups",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/activity-groups/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"activity-groups",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/activity-groups/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"activity-groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/todo-items",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"todo-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activity_group_id\": 2,\r\n    \"title\": \"todo-title-22\",\r\n    \"is_active\": \"1\",\r\n    \"priority\": \"lowest\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/todo-items/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"todo-items",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activity_group_id\": 2,\r\n    \"title\": \"todo-title-2\",\r\n    \"is_active\": \"1\",\r\n    \"priority\": \"low\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/todo-items",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"todo-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/todo-items/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"todo-items",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/todo-items/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"todo-items",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Healty Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000",
+					"host": [
+						"localhost"
+					],
+					"port": "9000"
+				}
+			},
+			"response": []
+		}
+	]
+}
