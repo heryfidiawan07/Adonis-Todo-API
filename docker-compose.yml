@@ -1,0 +1,40 @@
+version: "3"
+
+networks:
+  adonis:
+
+services:
+  adonis_prod:
+    build: ./fidiawan-app/build
+    image: "adonis_prod"
+    container_name: "adonis_container_prod"
+    ports:
+      - "3030:8000"
+    networks:
+      - adonis
+
+  adonis_dev:
+    build: ./fidiawan-app
+    image: "adonis_dev"
+    container_name: "adonis_container_dev"
+    ports:
+      - "4040:3000"
+    networks:
+      - adonis
+
+  mysql_service:
+    image: mysql:5.7.24
+    container_name: "mysql_container"
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - adonis
+    environment:
+      MYSQL_DATABASE: heri_fidiawan
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
